@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-pymongo" %}
-{% set version = "0.25b2" %}
+{% set version = "0.26b1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry-instrumentation-pymongo-{{ version }}.tar.gz
-  sha256: 57e973cf3b215748d33b87258ed0c844b6b5e94689076d5d782f0a37f0888087
+  sha256: 0a2764f7f1c22aa82f74346c00e29926d0ea42482609e7121dcda6027fd0b251
 
 build:
   number: 0
@@ -21,8 +21,8 @@ requirements:
     - python >=3.6
   run:
     - opentelemetry-api ~=1.3
-    - opentelemetry-instrumentation ==0.25b2
-    - opentelemetry-semantic-conventions ==0.25b2
+    - opentelemetry-instrumentation ==0.26b1
+    - opentelemetry-semantic-conventions ==0.26b1
     - python >=3.6
     # - pymongo ~=3.1
     # - opentelemetry-test ==0.24b0
@@ -30,6 +30,8 @@ requirements:
     # - opentelemetry-test ==0.25b0
     # - pymongo ~=3.1
     # - opentelemetry-test ==0.25b2
+    # - pymongo ~=3.1
+    # - opentelemetry-test-utils ==0.26b1
 
 test:
   imports:
