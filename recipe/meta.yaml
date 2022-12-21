@@ -1,56 +1,29 @@
 {% set name = "opentelemetry-instrumentation-pymongo" %}
-{% set version = "0.33b0" %}
-
+{% set version = "0.36b0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry-instrumentation-pymongo-{{ version }}.tar.gz
-  sha256: 7eb59b3045f85651cae77c515beffa802c1a9e301b549cb0fbf638e5920dfe78
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_instrumentation_pymongo-{{ version }}.tar.gz
+  sha256: 362a7d47650a452a1e100fb907517df18e7a0f29697a7943c12b4c7be51934b4
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
+    - python >=3.7
     - pip
-    - python >=3.6
+    - hatchling
   run:
-    - opentelemetry-api ~=1.12
-    - opentelemetry-instrumentation ==0.33b0
-    - opentelemetry-semantic-conventions ==0.33b0
-    - python >=3.6
-    # - pymongo ~=3.1
-    # - opentelemetry-test ==0.24b0
-    # - pymongo ~=3.1
-    # - opentelemetry-test ==0.25b0
-    # - pymongo ~=3.1
-    # - opentelemetry-test ==0.25b2
-    # - pymongo ~=3.1
-    # - opentelemetry-test-utils ==0.26b1
-    # - pymongo ~=3.1
-    # - opentelemetry-test-utils ==0.27b0
-    # - pymongo ~=3.1
-    # - opentelemetry-test-utils ==0.28b0
-    # - pymongo ~=3.1
-    # - opentelemetry-test-utils ==0.28b1
-    # - pymongo <5.0,>=3.1
-    # - opentelemetry-test-utils ==0.29b0
-    # - pymongo <5.0,>=3.1
-    # - opentelemetry-test-utils ==0.30b0
-    # - pymongo <5.0,>=3.1
-    # - opentelemetry-test-utils ==0.30b1
-    # - pymongo <5.0,>=3.1
-    # - opentelemetry-test-utils ==0.31b0
-    # - pymongo <5.0,>=3.1
-    # - opentelemetry-test-utils ==0.32b0
-    # - pymongo <5.0,>=3.1
-    # - opentelemetry-test-utils ==0.33b0
-
+    - python >=3.7
+    - opentelemetry-api >=1.12,<2.dev0
+    - opentelemetry-instrumentation ==0.36b0
+    - opentelemetry-semantic-conventions ==0.36b0
 test:
   imports:
     - opentelemetry
