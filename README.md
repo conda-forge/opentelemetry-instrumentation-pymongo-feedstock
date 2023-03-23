@@ -1,11 +1,11 @@
-About opentelemetry-instrumentation-pymongo
-===========================================
+About opentelemetry-instrumentation-pymongo-feedstock
+=====================================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/opentelemetry-instrumentation-pymongo-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/open-telemetry/opentelemetry-python-contrib/tree/main/instrumentation/opentelemetry-instrumentation-pymongo
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/opentelemetry-instrumentation-pymongo-feedstock/blob/main/LICENSE.txt)
 
 Summary: OpenTelemetry pymongo instrumentation
 
